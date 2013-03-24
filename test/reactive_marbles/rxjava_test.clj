@@ -17,6 +17,14 @@
                  :expr :src 
                  :out [|]])))
 
+(deftest flip-example
+  (is (marble [:src [ 1  2  3 4 5 6 | ]
+               :expr (.map :src (fn [value]
+                                  (if (= value 4)
+                                       (throw (Exception. "DemoFail on 4"))
+                                       (* -1 value))))
+               :out [-1 -2 -3 X]])))
+
 (deftest empty-test
     (is (marble [:expr (Observable/empty)
                  :out [|]])))
