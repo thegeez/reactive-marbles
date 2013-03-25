@@ -5,6 +5,8 @@ Testing RxJava with executable marble diagrams
 - RxJava: https://github.com/Netflix/RxJava
 - Marble diagrams: http://netflix.github.com/RxJava/javadoc/rx/Observable.html
 
+See http://thegeez.net/2013/03/25/neflix_rxjava_marble.html for more information.
+
 ## Usage
 ```
 lein test reactive-marbles.rxjava-test
